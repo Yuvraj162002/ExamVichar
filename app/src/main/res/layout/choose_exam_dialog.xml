@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="3sp">
+
+    <TextView
+        android:id="@+id/choose_exam"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:backgroundSplit"
+        android:padding="18dp"
+        android:text="Choose Exam"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/syllabus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="SYLLABUS"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/syllabus" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="NOTES"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+    <TextView
+        android:id="@+id/all_in_prev_papers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="PREVIOUS YEAR PAPER"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="syllabus,view,notes,view2,all_in_prev_papers"
+        tools:visibility="gone" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        app:boxCornerRadiusBottomEnd="8sp"
+        app:boxCornerRadiusBottomStart="8sp"
+        app:boxCornerRadiusTopEnd="8sp"
+        app:boxCornerRadiusTopStart="8sp"
+        app:boxStrokeColor="@color/purple"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Year" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceed_to_prev"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="32dp"
+        android:elevation="8dp"
+        android:shadowColor="#D70C0C0C"
+        android:text="PROCEED"
+        android:translationX="2dp"
+        android:translationZ="2dp"
+        app:backgroundTint="?android:backgroundSplit"
+        app:cornerRadius="24dp"
+        app:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="textInputLayout,proceed_to_prev"
+        tools:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/mains"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="MAINS"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mains" />
+
+    <TextView
+        android:id="@+id/advance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="ADVANCE"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="mains,view3,advance" />
+
+    <TextView
+        android:id="@+id/prelims"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="PRELIMS"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prelims" />
+
+    <TextView
+        android:id="@+id/mains_politics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="MAINS"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="prelims,view4,mains_politics" />
+
+    <TextView
+        android:id="@+id/qualifying_papers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="QUALIFYING PAPERS"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/viewUPSC"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qualifying_papers" />
+
+    <TextView
+        android:id="@+id/papers_merit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="PAPERS TO BE COUNTED FOR MERIT"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSC" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="qualifying_papers,viewUPSC,papers_merit" />
+
+    <TextView
+        android:id="@+id/essay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="ESSAY"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/viewUPSCMains"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/essay" />
+
+    <TextView
+        android:id="@+id/general_studies_i"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="GENERAL STUDIES - I"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSCMains" />
+
+
+    <View
+        android:id="@+id/viewUPSCMainsii"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_studies_i" />
+
+    <TextView
+        android:id="@+id/general_studies_ii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="GENERAL STUDIES - II"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSCMainsii" />
+
+    <View
+        android:id="@+id/viewUPSCMainsiii"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_studies_ii" />
+
+    <TextView
+        android:id="@+id/general_studies_iii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="GENERAL STUDIES - III"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSCMainsiii" />
+
+    <View
+        android:id="@+id/viewUPSCMainsiv"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_studies_iii" />
+
+    <TextView
+        android:id="@+id/general_studies_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="GENERAL STUDIES - IV"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSCMainsiv" />
+
+    <View
+        android:id="@+id/viewUPSCMainsv"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/general_studies_iv" />
+
+    <TextView
+        android:id="@+id/optional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="OPTIONAL"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewUPSCMainsv" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="essay,viewUPSCMains,general_studies_i,viewUPSCMainsii,general_studies_ii,viewUPSCMainsiii,general_studies_iii,viewUPSCMainsiv,general_studies_iv,viewUPSCMainsv,optional" />
+
+    <TextView
+        android:id="@+id/sub_inspector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="POLICE SUB-INSPECTOR"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_exam" />
+
+    <View
+        android:id="@+id/viewPolice"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:backgroundSplit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_inspector" />
+
+    <TextView
+        android:id="@+id/constable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:itemBackground"
+        android:padding="16sp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="POLICE CONSTABLE"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPolice" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="sub_inspector,viewPolice,constable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

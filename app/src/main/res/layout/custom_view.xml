@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10sp"
+    android:layout_marginEnd="10sp"
+    android:orientation="vertical"
+    android:paddingBottom="8sp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_marginStart="5sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginRight="10sp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="7dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:itemBackground">
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/round_third"
+                app:layout_constraintBottom_toBottomOf="@+id/all_in_exams"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.622"
+                app:layout_constraintStart_toEndOf="@+id/all_in_exams"
+                app:layout_constraintTop_toTopOf="@+id/all_in_exams"
+                app:srcCompat="@drawable/ias" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="28dp"
+                android:textColor = "?android:textColorPrimary"
+                android:layout_height="182dp"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="?android:backgroundSplit"
+                android:background="?android:textColorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/all_in_exams"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/all_in_exams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor = "?android:textColorPrimary"
+                android:layout_marginStart="22sp"
+                android:layout_marginTop="14dp"
+                android:paddingStart="26dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:text="@string/upsc_n_nnext_exam_date"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:paddingBottom="14sp"
+                android:text="@string/nextButton"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.773"
+                app:layout_constraintStart_toEndOf="@+id/all_in_exams" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

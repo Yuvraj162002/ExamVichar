@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.studentsapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudentsApp">
+        <activity android:name=".NetWorkActivity"></activity>
+        <activity android:name=".ComingSoon" />
+        <activity android:name=".MeritPapers" />
+        <activity android:name=".AboutApp" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".CollegePrevFinalPDF" />
+        <activity android:name=".CollegeNotesSelection" />
+        <activity android:name=".CollegeSyllabusPDF" />
+        <activity android:name=".CollegePrevPDF" />
+        <activity
+            android:name=".StateActivities.StatePrevYearPaper"
+            android:label="Previous Year Paper"
+            android:parentActivityName=".StateActivities.StateExams" />
+        <activity
+            android:name=".IndianActivities.IndiaPrevYearPapers"
+            android:label="Prev Year Paper"
+            android:parentActivityName=".IndianActivities.IndianActivity" />
+        <activity android:name=".CollegePDF" />
+        <activity
+            android:name=".BranchActivity"
+            android:label="College Activity"
+            android:parentActivityName=".CollegeActivity" />
+        <activity
+            android:name=".CollegeActivity"
+            android:label="College Level"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".StateActivities.StateNotesPDF"
+            android:label="Notes"
+            android:parentActivityName=".StateActivities.StatesNotesActivity"/>
+        <activity android:name=".StateActivities.StatesNotesActivity"
+            android:label="Notes"
+            android:parentActivityName=".StateActivities.StateExams"/>
+        <activity
+            android:name=".StateActivities.StatesSyllabusActivity"
+            android:label="Syllabus"
+            android:parentActivityName=".StateActivities.StateExams" />
+        <activity
+            android:name=".StateActivities.StateExams"
+            android:parentActivityName=".StateActivities.StatesActivity" />
+        <activity
+            android:name=".StateActivities.StatesActivity"
+            android:label="Select State"
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".IndianActivities.NotesPDF" />
+        <activity
+            android:name=".IndianActivities.NotesActivity"
+            android:label="Notes"
+            android:parentActivityName=".IndianActivities.IndianActivity" />
+        <activity
+            android:name=".IndianActivities.SyllabusActivity"
+            android:label="Syllabus"
+            android:parentActivityName=".IndianActivities.IndianActivity" />
+        <activity
+            android:name=".IndianActivities.IndianActivity"
+            android:label="Choose Exam"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".VerificationActivity"
+            android:label="Verification"
+            android:parentActivityName=".PhoneAuthentication" />
+        <activity
+            android:name=".PhoneAuthentication"
+            android:label="Phone Authentication"
+            android:parentActivityName=".RegistrationActivity" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:label=" Registration Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="  Home Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

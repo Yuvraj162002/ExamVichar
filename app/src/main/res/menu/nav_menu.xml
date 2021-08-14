@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home"></item>
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:title="AboutUs"
+            android:icon="@drawable/information_button"></item>
+
+        <item
+            android:id="@+id/nav_about_app"
+            android:title="AboutApp"
+            android:icon="@drawable/ic_feedback"></item>
+    </group>
+
+    <group android:checkableBehavior="none">
+
+        <item android:title="OTHER">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="@string/share"
+                    android:icon="@drawable/ic_share"></item>
+
+                <item
+                    android:id="@+id/nav_contact_us"
+                    android:title="@string/contactus"
+                    android:icon="@drawable/ic_baseline_contact"></item>
+
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:title="Help and Feedback"
+                    android:icon="@drawable/ic_help"></item>
+
+                <item
+                    android:id="@+id/nav_rate_us"
+                    android:title="@string/rate_us"
+                    android:icon="@drawable/ic_baseline_star"></item>
+
+
+            </menu>
+        </item>
+    </group>
+</menu>
